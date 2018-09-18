@@ -1,4 +1,4 @@
-package com.design.factory.simple.factory;
+package com.design.factory.normal.factory;
 
 /**
  * @author gsliu

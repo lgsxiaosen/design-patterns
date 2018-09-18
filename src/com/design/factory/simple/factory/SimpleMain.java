@@ -8,12 +8,8 @@ public class SimpleMain {
 
     public static void main(String[] args){
         //声明动物工厂
-        AnimalFactory dogFactory = new DogFactory();
-        AnimalFactory catFactory = new CatFactory();
-
-        //创建动物
-        AbstractAnimal dog = dogFactory.createAnimal();
-        AbstractAnimal cat = catFactory.createAnimal();
+        Dog dog = (Dog)AnimalFactory.createAnimal(Dog.class);
+        Cat cat = (Cat)AnimalFactory.createAnimal(Cat.class);
 
         dog.howl();
         cat.howl();
