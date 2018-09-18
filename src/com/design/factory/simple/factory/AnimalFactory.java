@@ -3,7 +3,7 @@ package com.design.factory.simple.factory;
 /**
  * @author gsliu
  * @date 2018-09-18 15:01
- * 创建一个动物工厂
+ * 创建一个动物工厂，通过反射方法创建实例
  */
 public class AnimalFactory {
     public static Object createAnimal(Class<? extends Animal> clazz){
