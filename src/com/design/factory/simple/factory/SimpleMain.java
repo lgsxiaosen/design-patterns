@@ -14,6 +14,5 @@ public class SimpleMain {
         dog.howl();
         cat.howl();
 
-
     }
 }
