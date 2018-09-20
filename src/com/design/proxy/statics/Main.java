@@ -10,7 +10,7 @@ public class Main {
         //定义租房
         IRentHose rentHose = new RentHose();
         //定义中介
-        IRentHose intermediary = new HoseIntermediary(rentHose);
+        IRentHose intermediary = new IntermediaryProxy(rentHose);
         //中介租房
         intermediary.rentHose();
     }

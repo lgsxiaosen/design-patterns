@@ -20,7 +20,7 @@ public class LandLord implements IRentHose {
 
     @Override
     public IRentHose getProxy() {
-        iRentHose = new HoseIntermediary(this);
+        iRentHose = new IntermediaryProxy(this);
         return iRentHose;
     }
 
