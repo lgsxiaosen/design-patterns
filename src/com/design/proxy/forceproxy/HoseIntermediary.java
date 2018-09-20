@@ -1,8 +1,8 @@
-package com.design.proxy.statics;
+package com.design.proxy.forceproxy;
 
 /**
  * @author gsliu
- * @date 2018-09-20 15:44
+ * @date 2018-09-20 16:16
  */
 public class HoseIntermediary implements IRentHose {
 
@@ -14,8 +14,11 @@ public class HoseIntermediary implements IRentHose {
 
     @Override
     public void rentHose() {
-        System.out.println("交中介费");
         rentHose.rentHose();
-        System.out.println("中介负责维修管理");
+    }
+
+    @Override
+    public IRentHose getProxy() {
+        return this;
     }
 }
