@@ -10,9 +10,8 @@ import java.lang.reflect.Method;
  */
 public class IntermediaryProxy implements InvocationHandler {
 
-    Class cls = null;
 
-    Object obj = null;
+    private Object obj;
 
     public IntermediaryProxy(Object object){
         obj = object;

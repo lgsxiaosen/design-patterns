@@ -19,5 +19,12 @@ public class Main {
         //动态产生一个代理者
         IRentHose proxy = (IRentHose) Proxy.newProxyInstance(cl, new Class[]{IRentHose.class}, handler);
         proxy.rentHose();
+
+        ISellHose sellHose = new SellHose();
+        InvocationHandler handler1 = new IntermediaryProxy(sellHose);
+        ClassLoader classLoader = sellHose.getClass().getClassLoader();
+        ISellHose proxy1 = (ISellHose) Proxy.newProxyInstance(classLoader, new Class[]{ISellHose.class}, handler1);
+        proxy1.sellHose();
+
     }
 }
