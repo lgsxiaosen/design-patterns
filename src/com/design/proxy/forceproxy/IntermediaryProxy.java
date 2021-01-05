@@ -4,21 +4,21 @@ package com.design.proxy.forceproxy;
  * @author gsliu
  * @date 2018-09-20 16:16
  */
-public class IntermediaryProxy implements IRentHose {
+public class IntermediaryProxy implements IRentHouse {
 
-    private IRentHose rentHose;
+    private IRentHouse rentHouse;
 
-    public IntermediaryProxy(IRentHose irentHose){
-        rentHose = irentHose;
+    public IntermediaryProxy(IRentHouse irentHouse){
+        rentHouse = irentHouse;
     }
 
     @Override
-    public void rentHose() {
-        rentHose.rentHose();
+    public void rentHouse() {
+        rentHouse.rentHouse();
     }
 
     @Override
-    public IRentHose getProxy() {
+    public IRentHouse getProxy() {
         return this;
     }
 }

@@ -8,12 +8,12 @@ public class Main {
 
     public static void main(String[] args){
 
-        IRentHose iRentHose = new LandLord();
+        IRentHouse iRentHouse = new LandLord();
         //租客找房东租房
-        iRentHose.rentHose();
+        iRentHouse.rentHouse();
         //找中介租房
-        IRentHose rentHose = iRentHose.getProxy();
-        rentHose.rentHose();
+        IRentHouse rentHouse = iRentHouse.getProxy();
+        rentHouse.rentHouse();
 
 
     }

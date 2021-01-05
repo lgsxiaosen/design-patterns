@@ -11,20 +11,20 @@ public class Main {
 
     public static void main(String[] args){
 
-        IRentHose rentHose = new RentHose();
+        IRentHouse rentHouse = new RentHouse();
         //定义一个handler
-        InvocationHandler handler = new IntermediaryProxy(rentHose);
+        InvocationHandler handler = new IntermediaryProxy(rentHouse);
         //获得类的class loader
-        ClassLoader cl = rentHose.getClass().getClassLoader();
+        ClassLoader cl = rentHouse.getClass().getClassLoader();
         //动态产生一个代理者
-        IRentHose proxy = (IRentHose) Proxy.newProxyInstance(cl, new Class[]{IRentHose.class}, handler);
-        proxy.rentHose();
+        IRentHouse proxy = (IRentHouse) Proxy.newProxyInstance(cl, new Class[]{IRentHouse.class}, handler);
+        proxy.rentHouse();
 
-        ISellHose sellHose = new SellHose();
-        InvocationHandler handler1 = new IntermediaryProxy(sellHose);
-        ClassLoader classLoader = sellHose.getClass().getClassLoader();
-        ISellHose proxy1 = (ISellHose) Proxy.newProxyInstance(classLoader, new Class[]{ISellHose.class}, handler1);
-        proxy1.sellHose();
+        ISellHouse sellHouse = new SellHouse();
+        InvocationHandler handler1 = new IntermediaryProxy(sellHouse);
+        ClassLoader classLoader = sellHouse.getClass().getClassLoader();
+        ISellHouse proxy1 = (ISellHouse) Proxy.newProxyInstance(classLoader, new Class[]{ISellHouse.class}, handler1);
+        proxy1.sellHouse();
 
     }
 }

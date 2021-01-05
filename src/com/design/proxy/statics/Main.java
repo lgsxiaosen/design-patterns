@@ -8,10 +8,10 @@ public class Main {
 
     public static void main(String[] args){
         //定义租房
-        IRentHose rentHose = new RentHose();
+        IRentHouse rentHouse = new RentHouse();
         //定义中介
-        IRentHose intermediary = new IntermediaryProxy(rentHose);
+        IRentHouse intermediary = new IntermediaryProxy(rentHouse);
         //中介租房
-        intermediary.rentHose();
+        intermediary.rentHouse();
     }
 }

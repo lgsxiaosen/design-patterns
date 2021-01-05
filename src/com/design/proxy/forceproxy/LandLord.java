@@ -5,12 +5,12 @@ package com.design.proxy.forceproxy;
  * @author gsliu
  * @date 2018-09-20 15:42
  */
-public class LandLord implements IRentHose {
+public class LandLord implements IRentHouse {
 
-    private IRentHose iRentHose = null;
+    private IRentHouse iRentHouse = null;
 
     @Override
-    public void rentHose() {
+    public void rentHouse() {
         if (isProxy()){
             System.out.println("租了一间房子。。。");
         }else {
@@ -19,9 +19,9 @@ public class LandLord implements IRentHose {
     }
 
     @Override
-    public IRentHose getProxy() {
-        iRentHose = new IntermediaryProxy(this);
-        return iRentHose;
+    public IRentHouse getProxy() {
+        iRentHouse = new IntermediaryProxy(this);
+        return iRentHouse;
     }
 
     /**
@@ -29,7 +29,7 @@ public class LandLord implements IRentHose {
      * @return
      */
     private boolean isProxy(){
-        if(this.iRentHose == null){
+        if(this.iRentHouse == null){
             return false;
         }else{
             return true;

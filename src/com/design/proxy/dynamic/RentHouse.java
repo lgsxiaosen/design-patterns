@@ -4,9 +4,9 @@ package com.design.proxy.dynamic;
  * @author gsliu
  * @date 2018-09-20 15:42
  */
-public class RentHose implements IRentHose {
+public class RentHouse implements IRentHouse {
     @Override
-    public void rentHose() {
+    public void rentHouse() {
         System.out.println("租了一间房子。。。");
     }
 }
